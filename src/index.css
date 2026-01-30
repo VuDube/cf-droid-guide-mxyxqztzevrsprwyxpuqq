@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Patrick+Hand&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+    --primary: 28 91% 54%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --ring: 28 91% 54%;
+    --radius: 1.25rem;
+  }
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --primary: 28 91% 54%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --border: 240 4% 16%;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans overflow-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1, h2, h3, .font-illustrative {
+    font-family: 'Patrick Hand', cursive;
+  }
+  .font-sketchy {
+    font-family: 'Fredericka the Great', cursive;
+  }
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scroll-width: none;
+  }
+}
